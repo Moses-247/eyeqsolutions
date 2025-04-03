@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #B78D65;
+    --primary: #42628c;
     --light: #F8F8F8;
-    --dark: #252525;
+    --dark: #000000;
 }
 
 h1,
@@ -550,4 +550,20 @@ h6,
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio for responsive scaling */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }

@@ -25,6 +25,59 @@
      <!-- Customized Bootstrap Stylesheet -->
      <link href="css/bootstrap.min.css" rel="stylesheet">
 
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #313436;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;        
+        }
+        .product {
+            flex: 1 1 calc(33.33% - 40px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product button {
+            background-color: rgb(75, 75, 247);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            .product {
+                flex: 1 1 calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <!-- Spinner Start -->
@@ -49,10 +102,10 @@
                     <a class="text-body px-2" href="#">Privacy</a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href="" style="border-radius: 50%;"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="border-radius: 50%;"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href="#" style="border-radius: 50%;"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -62,7 +115,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-2.png" alt="Icon" height="90" width=""></h1>
+            <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-2.png" alt="Icon" height="50" width=""></h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -91,6 +144,61 @@
         </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- Products page -->
+    <header>
+        <div class="text-center mx-auto mb-5 mt-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h4 class="section-title" style="color: whitesmoke;">Our Products</h4>
+            <h1 class="display-5 mb-4" style="color: whitesmoke;">Have a Look At Our Products</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Price:</strong> $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Nulla vel ligula id lectus tincidunt tempor.</p>
+            <p><strong>Price:</strong> $39.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Praesent nec imperdiet lorem.</p>
+            <p><strong>Price:</strong> $49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Praesent nec imperdiet lorem.</p>
+            <p><strong>Price:</strong> $49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Praesent nec imperdiet lorem.</p>
+            <p><strong>Price:</strong> $49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Praesent nec imperdiet lorem.</p>
+            <p><strong>Price:</strong> $49.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+
+    <!-- Products page -->
 
 
 

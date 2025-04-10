@@ -3,101 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EYEQ Security Solutions || Products Section</title>
+    <title>Document</title>
 
-     <!-- Favicon -->
-     <link rel="icon" href="img/favicon-1.png">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-1.png">
 
-     <!-- Google Web Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
- 
-     <!-- Icon Font Stylesheet -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
- 
-     <!-- Libraries Stylesheet -->
-     <link href="lib/animate/animate.min.css" rel="stylesheet">
-     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
- 
-     <!-- Customized Bootstrap Stylesheet -->
-     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
 
-     <style>
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .product {
-            position: relative;
-            width: 200px;
-            height: 300px;
-            overflow: hidden;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            background-color: #f9f9f9; /* Subtle background for better aesthetics */
+        
+        body {
+            min-height: 100vh;
         }
-        .product img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        
+        img {
             width: 100%;
-            height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother easing effect */
+            border-radius: 7px;
+            transition: filter 0.3s ease;
         }
-        .product img:nth-child(1) {
-            z-index: 1;
-            transform: translateX(0);
+        
+        h3 {
+            font-weight: 700;
         }
-        .product img:nth-child(2) {
-            z-index: 0;
-            transform: translateX(100%);
+        
+        p {
+            font-style: italic;
+            color: rgb(255, 255, 255);
+            font-weight: 700;
         }
-        .product:hover img:nth-child(1) {
-            transform: translateX(-100%);
-        }
-        .product:hover img:nth-child(2) {
-            transform: translateX(0);
-        }
-        h2, p, button {
-            position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.9); /* Slightly less transparent for readability */
-            margin: 10px 0;
-            padding: 5px 0;
-        }
+        
         button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            font-weight: bold;
+            display: inline-block;
+            width: auto; 
+            padding: 0.6rem 1.5rem;
+            border: 1px solid #606060;
+            background:#10f47a ;
+            font-weight: 400;
+            border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth button hover effects */
+            transition: all 0.3s ease;
         }
+        
         button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05); /* Slightly larger on hover */
+            background: rgba(0, 0, 0, 0.1);
+            border-color: #888;
         }
-    </style>
-
+        
+        .container {
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            max-width: 1400px;
+        }
+        
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .product-category {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .product-category h2 {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #606060;
+        }
+        
+        .products-container {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+        
+        .products-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .products-container::-webkit-scrollbar-track {
+            background: rgba(166, 161, 194, 0.1);
+        }
+        
+        .products-container::-webkit-scrollbar-thumb {
+            background: #606060;
+            border-radius: 4px;
+        }
+        
+        .product {
+            border: 1px solid #000000;
+            background: #5a5d5d;
+            min-width: 300px;
+            max-width: 300px;
+            height: 400px;
+            padding: 1rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .product:hover {
+            border-color: #888;
+            transform: translateY(-5px);
+        }
+        
+        .product:hover img {
+            filter: grayscale(0);
+        }
+        
+        .img {
+            height: 60%;
+            width: 100%;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            width: 100%;
+        }
+        
+        .more-info {
+            display: none;
+            font-style: normal;
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .product-list:has(.product:hover) .product:not(:hover) {
+            filter: blur(3px);
+            opacity: 0.6;
+        }
+        </style>
 </head>
 <body>
-    <!-- Spinner Start -->
-    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border position-relative" style="width: 6rem; height: 6rem;color:#42628c;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/favicon-1.png" alt="Icon" height="44">
-    </div> -->
-    <!-- Spinner End -->
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -123,11 +193,10 @@
         </div>
     </div>
     <!-- Topbar End -->
-
-    <!-- Navbar Start -->
+     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-2.png" alt="Icon" height="50" width=""></h1>
+            <h1 class="text-primary m-0"><img class="me-2" src="img/icons/icon-2.png" alt="Icon" height="70"></h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -135,144 +204,140 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
-                <!-- 
-                <a href="#about" class="nav-item nav-link">About</a>
+                <!-- <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#service" class="nav-item nav-link">Services</a>
-                -->
-                <!-- 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 m-0">
                         <a href="#features" class="dropdown-item">Why Choose Us</a>
+                        <a href="products.html" class="dropdown-item">Products</a>
                         <a href="project.html" class="dropdown-item">Our Projects</a>
                         <a href="team.html" class="dropdown-item">Team Members</a>
                         <a href="appointment.html" class="dropdown-item">Appointment</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a> 
+                        <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="#contact" class="nav-item nav-link">Contact</a>-->
-            </div>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div> -->
         </div>
     </nav>
     <!-- Navbar End -->
 
-    <!-- Products page -->
+
     <header>
         <div class="text-center mx-auto mb-5 mt-4 wow fadeInUp p-4" style="background-color: rgb(37, 36, 36);" data-wow-delay="0.1s" style="max-width: 600px;">
             <h4 class="section-title" style="color: azure;">Our Products</h4>
             <h1 class="display-5 mb-4" style="color: azure;">Have a Look At Our Products</h1>
         </div>
     </header>
+
     <div class="container">
-        <div class="product">
-            <img src="product1-front.jpg" alt="Product 1 Front">
-            <img src="product1-back.jpg" alt="Product 1 Back">
-            <h2>Network Cameras</h2>
-            <p>DS-2CD1023G2-LIU (4mm) (O-STD)</p>
-            <p><strong>Price:</strong> $29.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product2-front.jpg" alt="Product 2 Front">
-            <img src="product2-back.jpg" alt="Product 2 Back">
-            <h2>Network Cameras</h2>
-            <p><strong>DS-2CD1123G2-LIU (2.8mm) (O-STD)</strong></p>
-            <p><strong>Price:</strong> $39.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product3-front.jpg" alt="Product 3 Front">
-            <img src="product3-back.jpg" alt="Product 3 Back">
-            <h2>Network Video Recorders</h2>
-            <p><strong>DS-7104NI-Q1/4P/M (STD) (C)</strong></p>
-            <p><strong>Price:</strong> $49.99</p>
-            <button>Add to Cart</button>
+        <div class="product-list">
+            <!-- Network Cameras Section -->
+            <section class="product-category">
+                <h2>Network Cameras</h2>
+                <div class="products-container">
+                    <div class="product" data-price="50">
+                        <div class="img">
+                            <img src="https://imgs.search.brave.com/gqvRh3MzOI-PkZrjl8rUYM0yMOl6wIauFtinMfB0q6k/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hbG1p/cmlhLmNvLmtlL21l/ZGlhL2NhY2hlL2U5/LzA3L2U5MDc1M2U1/M2RkNzQ2NDA2YTAx/OTAwNjYwODY2Njhi/LndlYnA" alt="Network Camera">
+                        </div>
+                        <div class="info">
+                            <h3>Network Cameras</h3>
+                            <p>DS-2CD1023G2-LIU(4mm)(O-STD)</p>
+                            <div class="more-info">
+                                <p>The Perfect Nautica for adventurous travels</p>
+                            </div>
+                        </div>
+                        <button onclick="showMoreInfo(this)">Read More</button>
+                        <div class="more-info">
+                            <p>The Pefect Nautica for adventurous travels</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product" data-price="50">
+                        <div class="img">
+                            <img src="https://imgs.search.brave.com/sxbn3EzFk4nPPF5pS5sfPygMXUm5Q9e9MBBmTox_3VQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2FzYXV0b21hdGlj/YS5uZXQvdXBsb2Fk/cy9jYWNoZS9hcnRp/Z29zLzI0NjQyLTM1/Mng0MDAtcmVzaXpl/LXBhZC5wbmc" alt="Network Camera">
+                        </div>
+                        <div class="info">
+                            <h3>Network Cameras</h3>
+                            <p>DS-2CD1123G2-LIU(2.8mm)(O-STD)</p>
+                            <div class="more-info">
+                                <p>2 MP Smart Hybrid Light Fixed Dome Network Camera</p>
+                            </div>
+                        </div>
+                        <button onclick="showMoreInfo(this)">Read More</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Network Video Recorders & Cameras Section -->
+            <section class="product-category">
+                <h2>Network Video Recorders & Cameras</h2>
+                <div class="products-container">
+                    <div class="product" data-price="50">
+                        <div class="img">
+                            <img src="https://imgs.search.brave.com/XsSlFuxGqMfE7vAVYUfStw_TDjGr0YO5Mmxaq3dR7Kc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzUxc0FwOXBXWXBM/LmpwZw" alt="Network Video Camera">
+                        </div>
+                        <div class="info">
+                            <h3>Network Video Camera</h3>
+                            <p>DS-7104NI-Q1/4P/M(STD)(C)- Value Series</p>
+                            <div class="more-info">
+                                <p>40Mbps Bit Rate Input Max</p>
+                            </div>
+                        </div>
+                        <button onclick="showMoreInfo(this)">Read More</button>
+                    </div>
+                    
+                    <div class="product" data-price="50">
+                        <div class="img">
+                            <img src="https://imgs.search.brave.com/Qa22rYNnJas8SW05tru3hz8A0XGjoPWzUIkH2fOg4AI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFqdnR6eE9CWUwu/anBn" alt="Network Video Recorder">
+                        </div>
+                        <div class="info">
+                            <h3>Network Video Recorders</h3>
+                            <p>DS-7108NI-Q1/8P/M(STD)(C)- Value Series</p>
+                            <div class="more-info">
+                                <p>40Mbps Bit Rate Input Max</p>
+                            </div>
+                        </div>
+                        <button onclick="showMoreInfo(this)">Read More</button>
+                        <div class="more-info">
+                            <p>The Pefect Nautica for adventurous travels</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Other Products Section -->
+            <section class="product-category">
+                <h2>Accessories</h2>
+                <div class="products-container">
+                    <div class="product" data-price="50">
+                        <div class="img">
+                            <img src="https://imgs.search.brave.com/P-P26WktKfh2YeXepJWQU9xYbz_77_mV46Y-j4KCw2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aW50ZXJtYWNvLmNv/bS5hci9wcm9kdWN0/b3MvMzA3NDAwMzA2/LmpwZw" alt="Cables">
+                        </div>
+                        <div class="info">
+                            <h3>Cables</h3>
+                            <p>DS-1H18S/E(C)(STD)</p>
+                            <div class="more-info">
+                                <p>#</p>
+                            </div>
+                        </div>
+                        <button onclick="showMoreInfo(this)">Read More</button>
+                    </div>
+                    
+                    <!-- Add all other products here following the same structure -->
+                    <!-- Each should be inside the products-container div -->
+                </div>
+            </section>
         </div>
     </div>
 
-
-
-    <!-- Products page -->
-
-
-
-
-
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5 justify-content-evenly"> <!-- Added justify-content-evenly -->
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Address</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt  me-3" style="color: aliceblue;"></i>Kiserian, Kenya</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt  me-3" style="color: aliceblue;"></i>+254 707 804 473</p>
-                    <p class="mb-2"><i class="fa fa-envelope  me-3" style="color: aliceblue;"></i>info@eyeqsolutions@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-sm-square btn-outline-body me-0" href="" style="border-radius: 50%;"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+                
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-light mb-4">Services</h3>
                     <a class="btn btn-link" href="">Surveillance Solutions</a>
@@ -289,6 +354,19 @@
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt  me-3" style="color: aliceblue;"></i> <br>Kiserian, Kenya <br> Zen Petrol Station <br>Ground Floor Room no. A-04 </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt  me-3" style="color: aliceblue;"></i>+254 707 804 473</p>
+                    <p class="mb-2"><i class="fa fa-envelope  me-3" style="color: aliceblue;"></i>info@eyeqsolutions@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-sm-square btn-outline-body me-1" href="" style="border-radius: 50%;"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-outline-body me-0" href="https://www.tiktok.com/@eyeq.ltd?_t=ZM-8vCG8Nze3DZ&_r=1" style="border-radius: 50%;"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -304,17 +382,19 @@
     <!-- Footer End -->
 
 
-    <div style="position: fixed; right: 10px; bottom: 20px; z-index: 1000;">
-        <a href="https://wa.me/254707804473" target="_blank">
-          <img src="img/icons/whatsapp (1).png" alt="WhatsApp" style="width: 50px; height: 50px;">
-        </a>
-      </div>
 
-
-
-    <!-- Back to Top
-    <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #42628c; border-radius: 50%;"><i class="bi bi-arrow-up"></i></a> -->
-
+    <script>
+        function showMoreInfo(button) {
+          const moreInfoDiv = button.nextElementSibling;
+          if (moreInfoDiv.style.display === "none" || moreInfoDiv.style.display === "") {
+            moreInfoDiv.style.display = "block";
+            button.textContent = "Show Less";
+          } else {
+            moreInfoDiv.style.display = "none";
+            button.textContent = "Read More";
+          }
+        }
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -330,5 +410,10 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    
 </body>
+
+<script>
+</script>
 </html>

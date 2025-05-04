@@ -32,6 +32,19 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "rk8o3XDP6v9suZ8_X",
+        });
+    })();
+    </script>
+
+    <script src="js/script.js"></script>
+
 </head>
 <body>
 
@@ -361,12 +374,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                        <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                        <h1 class="mb-3">Providing Quality Products</h1>
+                                        <p class="mb-4">At EYEQ Security Solutions we Offer the best products tailored for reliable security solutions  across Kenya</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Surveillance Solutions</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Access Control</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Solar Lighting</p>
+                                        <a href="products.html" class="btn btn-primary py-3 px-5 mt-3">More Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -379,12 +392,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                        <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                       <h1 class="mb-3">Providing Quality Products</h1>
+                                        <p class="mb-4">At EYEQ Security Solutions we Offer the best products tailored for reliable security solutions  across Kenya</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Surveillance Solutions</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Access Control</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Solar Lighting</p>
+                                        <a href="products.html" class="btn btn-primary py-3 px-5 mt-3">More Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -397,12 +410,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                        <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                        <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                        <h1 class="mb-3">Providing Quality Products</h1>
+                                        <p class="mb-4">At EYEQ Security Solutions we Offer the best products tailored for reliable security solutions  across Kenya</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Surveillance Solutions</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Access Control</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Solar Lighting</p>
+                                        <a href="products.html" class="btn btn-primary py-3 px-5 mt-3">More Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -447,21 +460,27 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Your Name" style="height: 55px;">
+
+                    <form action="">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="button" onclick="sendMail()">Send Message</button>
+                            </div>
                         </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control" placeholder="Your Email" style="height: 55px;">
-                        </div>
-                        
-                        <div class="col-12">
-                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                        </div>
-                    </div>
+                    </form>
+
                 </div>
             </div>
         </div>
